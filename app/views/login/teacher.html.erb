@@ -1,0 +1,11 @@
+<%= form_tag  action: :auth do %>
+<center>
+    <%= label_tag :id, "学教師番号" %><br>
+    <div class="col-md-2">
+    <%= text_field_tag :id, '',class:'form-control' %> <br>
+    <%= label_tag :password , "パスワード" %><br></div>
+    <div class="col-md-2">
+    <%= password_field_tag :password, '',class:'form-control'%>
+    <br><%= submit_tag 'ログイン', class:'btn btn-primary mb-2'%>
+  </div>
+<% end %>

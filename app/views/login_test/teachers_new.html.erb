@@ -1,0 +1,37 @@
+<%= form_for @teacher,:url => {:action => :create_teachers} do |f| %>
+    <div class="field">
+      <div class="col-md-2">
+        <%= f.label :id, "教師番号" %><br>
+        <%= f.text_field :id ,class:"form-control"%> <br>
+    </div>
+  </div>
+    <div class="field">
+      <div class="col-md-2">
+        <%= f.label :password , "パスワード" %><br>
+        <%= f.password_field :password ,class:"form-control"%>
+      </div>
+    </div>
+    <div class="field">
+      <div class="col-md-2">
+        <%= f.label :password_confirmation , "パスワード確認" %><br>
+        <%= f.password_field :password_confirmation ,class:"form-control"%>
+      </div>
+    </div>
+    <div class="field">
+      <div class="col-md-2">
+        <%= f.label :teacher, "クラス" %><br>
+        <%= f.text_field :k_class ,class:"form-control"%> <br>
+      </div>
+　   </div>
+    <div class="field">
+      <div class="col-md-2">
+        <%= f.label :number, "名前" %><br>
+        <%= f.text_field :name ,class:"form-control"%> <br>
+　   </div>
+</div>
+    <div class="actions" >
+      <div class="col-md-2">
+<%= f.submit('登　録' ,class:'btn btn-primary mb-2')%>
+      </div>
+    </div>
+<% end %>

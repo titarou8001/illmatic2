@@ -1,0 +1,16 @@
+<%= form_tag  action: :auth do %>
+<center>
+        <%= label_tag :studentid, "学生番号" %><br>
+        <div class="col-md-2">
+        <%= text_field_tag :studentid, '',class:'form-control' %> <br>
+        <%= label_tag :password , "パスワード" %><br></div>
+        <div class="col-md-2">
+        <%= password_field_tag :password, '',class:'form-control' %>
+        <br><%= submit_tag 'ログイン', class:'btn btn-primary mb-2' %>
+      </div>
+<% end %>
+<%= link_to "生徒登録画面", :controller => "login_test", :action => "index" %>
+<%= link_to "教師登録画面", :controller => "login_test", :action => "teachers_new" %>
+<br>
+<%= link_to "教師側のログインはこちら", :controller => "login", :action => "teacher" %>
+</center>
